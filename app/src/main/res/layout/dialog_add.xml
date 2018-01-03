@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DialogRootStyle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dialog_padding"
+        tools:ignore="ScrollViewSize">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/tv_title_vertical_margin"
+            android:layout_marginTop="@dimen/tv_title_vertical_margin"
+            android:text="@string/str_add_drop"
+            android:textSize="@dimen/tv_title_font_size" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            style="@style/DialogCloseButtonStyle"
+            android:layout_alignBottom="@id/tv_title"
+            android:layout_alignTop="@id/tv_title"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/et_drop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:background="@drawable/bg_et_drop"
+            android:hint="@string/hint_et_drop"
+            android:inputType="textVisiblePassword"
+            android:padding="@dimen/et_drop_padding" />
+
+        <com.codyapa.bucketlist.widgets.BucketPickerView
+            android:id="@+id/bpv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_drop"
+            android:layout_marginBottom="@dimen/bpv_margin_vertical"
+            android:layout_marginTop="@dimen/bpv_margin_vertical" />
+
+        <Button
+            android:id="@+id/btn_add_it"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bpv_date"
+            android:background="@drawable/bg_btn_add_it"
+            android:text="@string/str_add_it"
+            android:textAllCaps="false"
+            android:textSize="@dimen/btn_add_it_font_size" />
+    </RelativeLayout>
+</ScrollView>
